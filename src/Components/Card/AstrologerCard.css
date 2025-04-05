@@ -1,0 +1,9 @@
+.container {
+    padding: 20px;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.cardStyle{
+    display: flex;
+}

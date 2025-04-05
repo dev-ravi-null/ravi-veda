@@ -1,9 +1,10 @@
-import React from 'react'
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from '../Redux/User/UserSlice';
+import kundliReducer from '../Redux/Kundli/KundliSlice';
 
-const Store = () => {
-  return (
-    <div>Store</div>
-  )
-}
-
-export default Store
+export const store = configureStore({
+    reducer: {
+        user: userReducer,
+        kundli: kundliReducer,
+    },
+});

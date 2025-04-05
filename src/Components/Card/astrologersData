@@ -1,0 +1,32 @@
+import { faker } from '@faker-js/faker';
+
+const generateRandomAstrologer = (id) => {
+    const numLanguages = faker.number.int({ min: 1, max: 3 });
+    const languages = faker.helpers.uniqueArray(faker.lorem.word, numLanguages);
+    const numReviews = faker.number.int({ min: 0, max: 5 });
+    const reviews = Array.from({ length: numReviews }, () => ({
+        user: faker.person.fullName(),
+        rating: faker.number.float({ min: 4, max: 5, precision: 0.1 }),
+        comment: faker.lorem.sentence({ min: 0, max: 10 }),
+    }));
+    const numAvailability = faker.number.int({ min: 3, max: 7 });
+    const allDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    const availability = faker.helpers.arrayElements(allDays, numAvailability);
+
+    return {
+        id: id,
+        name: faker.person.fullName(),
+        image: faker.image.avatar(),
+        rating: faker.number.float({ min: 3.5, max: 5, precision: 0.1 }),
+        languages: languages,
+        experience: `${faker.number.int({ min: 1, max: 15 })} Yrs`,
+        price: faker.number.int({ min: 20, max: 100 }),
+        about: faker.lorem.paragraph({ min: 2, max: 5 }),
+        reviews: reviews,
+        availability: availability.sort(), // Sort for consistency
+    };
+};
+
+const astrologers = Array.from({ length: 10 }, (_, index) => generateRandomAstrologer(index + 1));
+
+export default astrologers;
