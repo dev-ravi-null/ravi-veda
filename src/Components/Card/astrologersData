@@ -6,7 +6,7 @@ const generateRandomAstrologer = (id) => {
     const numReviews = faker.number.int({ min: 0, max: 5 });
     const reviews = Array.from({ length: numReviews }, () => ({
         user: faker.person.fullName(),
-        rating: faker.number.float({ min: 4, max: 5, precision: 0.1 }),
+        rating: faker.number.float({ min: 4, max: 5 }),
         comment: faker.lorem.sentence({ min: 0, max: 10 }),
     }));
     const numAvailability = faker.number.int({ min: 3, max: 7 });
@@ -17,7 +17,7 @@ const generateRandomAstrologer = (id) => {
         id: id,
         name: faker.person.fullName(),
         image: faker.image.avatar(),
-        rating: faker.number.float({ min: 3.5, max: 5, precision: 0.1 }),
+        rating: faker.number.float({ min: 3.5, max: 5 }),
         languages: languages,
         experience: `${faker.number.int({ min: 1, max: 15 })} Yrs`,
         price: faker.number.int({ min: 20, max: 100 }),
@@ -27,6 +27,6 @@ const generateRandomAstrologer = (id) => {
     };
 };
 
-const astrologers = Array.from({ length: 10 }, (_, index) => generateRandomAstrologer(index + 1));
+const astrologers = Array.from({ length: 6 }, (_, index) => generateRandomAstrologer(index + 1));
 
-export default astrologers;
+export default astrologers; 
