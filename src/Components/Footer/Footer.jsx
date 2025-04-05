@@ -1,13 +1,14 @@
 import React from 'react';
+import '../../Theme.css'
 const Footer = () => {
     return (
-        <footer className="bg-danger text-light pt-4">
+        <footer className="bg-primary text-light pt-4">
             <div className="container">
                 <div className="row">
                     {/* Logo and Description */}
                     <div className="col-md-4 mb-3">
                         <img
-                        src="https://www.viaveda.in/static/logo/logo.png"
+                            src="https://www.viaveda.in/static/logo/logo.png"
                             alt="ViaVeda Logo"
                             className="mb-2"
                             style={{ maxWidth: '150px' }}

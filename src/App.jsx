@@ -1,14 +1,18 @@
-// App.jsx
-import Login from './Components/Auth/Login';
-import AstrologerCard from './Components/Card/AstrologerCard';
-import Home from './Components/Home/Home';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './Theme.css';
+import Home from './Components/Home/Home'
+// import About from './About.jsx';
+import './Theme.css'
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

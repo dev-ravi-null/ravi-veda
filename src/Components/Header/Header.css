@@ -1,0 +1,47 @@
+.custom-header {
+  background-color: var(--primary-color);
+}
+
+
+.custom-header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+  /* font-weight: bold; */
+  margin-right: 12px;
+  font-size: 15px;
+}
+
+.custom-nav .nav-link:hover {
+  background-color: #fff;
+  /* White background on hover */
+  color: var(--primary-color);
+  /* Blue text color on hover */
+  border-radius: 8px;
+  /* Rounded edges */
+  text-decoration: none;
+}
+
+
+.custom-toggle {
+  margin-right: 15%;
+  /* height: 40px; */
+}
+
+.Login-btn {
+  height: 40px;
+  width: 60px;
+  border-radius: 10px;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  border: none;
+  /* margin-right: 50px; */
+  margin-left: -150px;
+  margin-right: 40px;
+  font-weight: 550;
+}

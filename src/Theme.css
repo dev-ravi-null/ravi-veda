@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #1A237E;
+    /* Deep Blue */
+    --secondary-color: #FF6F00;
+    /* Bright Orange */
+    --accent-color: #FFD700;
+    /* Gold */
+    --background-color: #F5F5F5;
+    /* Light Gray */
+    --text-color: #212121;
+    --text-color-light: #FFEFF9;
+    /* Dark Gray */
+}
