@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../Redux/User/UserSlice';
+import { useNavigate } from 'react-router-dom'; // ✅ import this
 
 const Login = () => {
   const [step, setStep] = useState(1);
@@ -10,11 +11,13 @@ const Login = () => {
   const [error, setError] = useState('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // ✅ useNavigate
 
   const handlePhoneSubmit = (e) => {
     e.preventDefault();
     if (name.trim() && phone.length === 10) {
       setStep(2);
+      setError('');
     } else {
       setError('Enter valid name and 10-digit phone number');
     }
@@ -27,6 +30,7 @@ const Login = () => {
       const userData = { name, phone, isLoggedIn: true };
       dispatch(login(userData));
       alert('Login Successful ✅');
+      navigate('/'); // ✅ Redirect to homepage after login
     } else {
       setError('Invalid OTP');
     }
@@ -89,3 +93,4 @@ const Login = () => {
 };
 
 export default Login;
+  
